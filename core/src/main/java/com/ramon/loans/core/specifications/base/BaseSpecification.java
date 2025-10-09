@@ -9,4 +9,12 @@ public interface BaseSpecification<T> {
         return new ConjunctionSpecification<>(this, other);
     }
 
+    default BaseSpecification<T> or(BaseSpecification<T> other) {
+        return new DisjunctionSpecification<>(this, other);
+    }
+
+    default BaseSpecification<T> not() {
+        return new NegationSpecification<>(this);
+    }
+
 }
