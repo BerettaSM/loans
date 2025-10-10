@@ -21,7 +21,7 @@ public final class AgeSpec {
         return customer -> customer.getAge() >= age;
     }
 
-    public static final Specification<Customer> between(
+    public static final Specification<Customer> ageBetween(
             Integer lowerBoundAge,
             Integer upperBoundAge) {
         return olderThanOrAt(lowerBoundAge).and(youngerThanOrAt(upperBoundAge));
