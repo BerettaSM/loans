@@ -1,50 +1,51 @@
 package com.ramon.loans.core.specifications.base;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class DisjunctionSpecificationTests {
 
-    private static BaseSpecification<Object> falseSpec;
-    private static BaseSpecification<Object> trueSpec;
+    private static Specification<Object> falseSpec;
+    private static Specification<Object> trueSpec;
+
+    private static Object candidate;
 
     @BeforeAll
     public static void setUp() {
         falseSpec = (o) -> false;
         trueSpec = (o) -> true;
+
+        candidate = new Object();
     }
 
     @Test
     public void disjunctionSpecificationShouldReturnTrueWhenCompositeTrueOrTrue() {
-        Object candidate = new Object();
         var disjunction = new DisjunctionSpecification<>(trueSpec, trueSpec);
 
-        Assertions.assertTrue(disjunction.isSatisfiedBy(candidate));
+        assertTrue(disjunction.isSatisfiedBy(candidate));
     }
 
     @Test
     public void disjunctionSpecificationShouldReturnTrueWhenCompositeTrueOrFalse() {
-        Object candidate = new Object();
         var disjunction = new DisjunctionSpecification<>(trueSpec, falseSpec);
 
-        Assertions.assertTrue(disjunction.isSatisfiedBy(candidate));
+        assertTrue(disjunction.isSatisfiedBy(candidate));
     }
 
     @Test
     public void disjunctionSpecificationShouldReturnTrueWhenCompositeFalseOrTrue() {
-        Object candidate = new Object();
         var disjunction = new DisjunctionSpecification<>(falseSpec, trueSpec);
 
-        Assertions.assertTrue(disjunction.isSatisfiedBy(candidate));
+        assertTrue(disjunction.isSatisfiedBy(candidate));
     }
 
     @Test
     public void disjunctionSpecificationShouldReturnFalseWhenCompositeFalseOrFalse() {
-        Object candidate = new Object();
         var disjunction = new DisjunctionSpecification<>(falseSpec, falseSpec);
 
-        Assertions.assertFalse(disjunction.isSatisfiedBy(candidate));
+        assertFalse(disjunction.isSatisfiedBy(candidate));
     }
 
 }

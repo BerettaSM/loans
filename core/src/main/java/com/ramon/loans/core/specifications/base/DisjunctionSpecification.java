@@ -3,10 +3,10 @@ package com.ramon.loans.core.specifications.base;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class DisjunctionSpecification<T> implements BaseSpecification<T> {
+public class DisjunctionSpecification<T> implements Specification<T> {
 
-    private final BaseSpecification<T> leftSpec;
-    private final BaseSpecification<T> rightSpec;
+    private final Specification<T> leftSpec;
+    private final Specification<T> rightSpec;
 
     @Override
     public boolean isSatisfiedBy(T candidate) {

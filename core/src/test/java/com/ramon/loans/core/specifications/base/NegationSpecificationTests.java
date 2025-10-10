@@ -1,34 +1,37 @@
 package com.ramon.loans.core.specifications.base;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class NegationSpecificationTests {
 
-    private static BaseSpecification<Object> falseSpec;
-    private static BaseSpecification<Object> trueSpec;
+    private static Specification<Object> falseSpec;
+    private static Specification<Object> trueSpec;
+
+    private static Object candidate;
 
     @BeforeAll
     public static void setUp() {
         falseSpec = (o) -> false;
         trueSpec = (o) -> true;
+
+        candidate = new Object();
     }
 
     @Test
     public void negationSpecificationShouldReturnTrueWhenFalse() {
-        Object candidate = new Object();
         var negation = new NegationSpecification<>(falseSpec);
 
-        Assertions.assertTrue(negation.isSatisfiedBy(candidate));
+        assertTrue(negation.isSatisfiedBy(candidate));
     }
 
     @Test
     public void negationSpecificationShouldReturnFalseWhenTrue() {
-        Object candidate = new Object();
         var negation = new NegationSpecification<>(trueSpec);
 
-        Assertions.assertFalse(negation.isSatisfiedBy(candidate));
+        assertFalse(negation.isSatisfiedBy(candidate));
     }
 
 }

@@ -1,19 +1,19 @@
 package com.ramon.loans.core.specifications.base;
 
 @FunctionalInterface
-public interface BaseSpecification<T> {
+public interface Specification<T> {
 
     boolean isSatisfiedBy(T candidate);
 
-    default BaseSpecification<T> and(BaseSpecification<T> other) {
+    default Specification<T> and(Specification<T> other) {
         return new ConjunctionSpecification<>(this, other);
     }
 
-    default BaseSpecification<T> or(BaseSpecification<T> other) {
+    default Specification<T> or(Specification<T> other) {
         return new DisjunctionSpecification<>(this, other);
     }
 
-    default BaseSpecification<T> not() {
+    default Specification<T> not() {
         return new NegationSpecification<>(this);
     }
 
