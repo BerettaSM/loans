@@ -13,6 +13,12 @@ public class CustomerFactory {
         return customer;
     }
 
+    public static final Customer withIncome(Double income) {
+        Customer customer = createCustomer();
+        customer.setIncome(BigDecimal.valueOf(income));
+        return customer;
+    }
+
     public static Customer createCustomer() {
         return new Customer(
             "John Doe", 
