@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
-import com.ramon.loans.core.entities.Customer;
 import com.ramon.loans.core.enums.State;
+import com.ramon.loans.core.models.Customer;
 import com.ramon.loans.core.specifications.factories.CustomerFactory;
 
 public class LocationSpecTests {

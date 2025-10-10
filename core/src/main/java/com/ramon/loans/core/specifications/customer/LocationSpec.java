@@ -2,8 +2,8 @@ package com.ramon.loans.core.specifications.customer;
 
 import java.util.Arrays;
 
-import com.ramon.loans.core.entities.Customer;
 import com.ramon.loans.core.enums.State;
+import com.ramon.loans.core.models.Customer;
 import com.ramon.loans.core.specifications.base.Specification;
 
 public final class LocationSpec {

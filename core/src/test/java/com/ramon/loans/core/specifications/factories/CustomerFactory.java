@@ -2,8 +2,8 @@ package com.ramon.loans.core.specifications.factories;
 
 import java.math.BigDecimal;
 
-import com.ramon.loans.core.entities.Customer;
 import com.ramon.loans.core.enums.State;
+import com.ramon.loans.core.models.Customer;
 
 public class CustomerFactory {
 

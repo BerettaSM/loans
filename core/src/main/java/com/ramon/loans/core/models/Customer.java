@@ -1,4 +1,4 @@
-package com.ramon.loans.core.entities;
+package com.ramon.loans.core.models;
 
 import java.math.BigDecimal;
 
