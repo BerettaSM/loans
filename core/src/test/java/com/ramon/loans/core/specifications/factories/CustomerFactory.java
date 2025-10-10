@@ -19,6 +19,12 @@ public class CustomerFactory {
         return customer;
     }
 
+    public static final Customer withLocation(State location) {
+        Customer customer = createCustomer();
+        customer.setLocation(location);
+        return customer;
+    }
+
     public static Customer createCustomer() {
         return new Customer(
             "John Doe", 
