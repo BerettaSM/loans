@@ -1,8 +1,8 @@
-package com.ramon.loans.core.models;
+package com.ramon.loans.core.domain.models;
 
 import java.math.BigDecimal;
 
-import com.ramon.loans.core.enums.State;
+import com.ramon.loans.core.domain.enums.State;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.ramon.loans.core.enums;
+package com.ramon.loans.core.domain.enums;
 
 import lombok.AccessLevel;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.ramon.loans.core.specifications.base;
+package com.ramon.loans.core.specifications;
 
 @FunctionalInterface
 public interface Specification<T> {

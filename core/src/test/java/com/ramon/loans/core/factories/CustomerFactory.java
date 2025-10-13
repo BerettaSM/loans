@@ -1,9 +1,10 @@
-package com.ramon.loans.core.specifications.factories;
+package com.ramon.loans.core.factories;
 
 import java.math.BigDecimal;
 
-import com.ramon.loans.core.enums.State;
-import com.ramon.loans.core.models.Customer;
+import com.ramon.loans.core.domain.enums.State;
+import com.ramon.loans.core.domain.models.Customer;
+
 
 public class CustomerFactory {
 

@@ -1,9 +1,9 @@
-package com.ramon.loans.core.specifications.customer;
+package com.ramon.loans.core.domain.rule.specifications;
 
 import java.math.BigDecimal;
 
-import com.ramon.loans.core.models.Customer;
-import com.ramon.loans.core.specifications.base.Specification;
+import com.ramon.loans.core.domain.models.Customer;
+import com.ramon.loans.core.specifications.Specification;
 
 public final class IncomeSpec {
 

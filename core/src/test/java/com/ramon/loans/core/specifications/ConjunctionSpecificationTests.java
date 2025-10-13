@@ -1,4 +1,4 @@
-package com.ramon.loans.core.specifications.base;
+package com.ramon.loans.core.specifications;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
