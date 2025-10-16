@@ -4,10 +4,25 @@ import java.util.List;
 
 import com.ramon.loans.core.domain.models.Customer;
 import com.ramon.loans.core.domain.models.Loan;
+import com.ramon.loans.core.domain.policies.LoanEligibilityPolicy;
 import com.ramon.loans.core.domain.rule.LoanRule;
 import com.ramon.loans.core.specifications.Specification;
 
 public class LoanFactory {
+
+    public static final LoanEligibilityPolicy createLoanEligibilityPolicy() {
+        return new LoanEligibilityPolicy();
+    }
+
+    public static final LoanRule createTrueLoanRule() {
+        Specification<Customer> trueSpec = SpecFactory.createTrueSpec();
+        return createLoanRule(Loan.Type.PERSONAL, List.of(trueSpec));
+    }
+
+    public static final LoanRule createFalseLoanRule() {
+        Specification<Customer> falseSpec = SpecFactory.createFalseSpec();
+        return createLoanRule(Loan.Type.CONSIGNMENT, List.of(falseSpec));
+    }
 
     public static final LoanRule createLoan(List<Specification<Customer>> specs) {
         return createLoanRule(Loan.Type.PERSONAL, specs);
