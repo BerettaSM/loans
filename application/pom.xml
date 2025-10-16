@@ -20,4 +20,14 @@
 
     <packaging>jar</packaging>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.ramon.loans</groupId>
+            <artifactId>core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
 </project>
