@@ -1,9 +1,13 @@
-package com.ramon.loans.core.specifications;
+package com.ramon.loans.coretest.specifications;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import com.ramon.loans.core.specifications.NegationSpecification;
+import com.ramon.loans.core.specifications.Specification;
+import com.ramon.loans.coretest.factories.SpecFactory;
 
 public class NegationSpecificationTests {
 
@@ -14,8 +18,8 @@ public class NegationSpecificationTests {
 
     @BeforeAll
     public static void setUp() {
-        falseSpec = (o) -> false;
-        trueSpec = (o) -> true;
+        falseSpec = SpecFactory.createFalseSpec();
+        trueSpec = SpecFactory.createTrueSpec();
 
         candidate = new Object();
     }

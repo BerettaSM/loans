@@ -1,4 +1,4 @@
-package com.ramon.loans.core.domain.policies;
+package com.ramon.loans.coretest.domain.policies;
 
 import java.util.List;
 
@@ -10,9 +10,10 @@ import org.junit.jupiter.api.Test;
 
 import com.ramon.loans.core.domain.models.Customer;
 import com.ramon.loans.core.domain.models.Loan;
+import com.ramon.loans.core.domain.policies.LoanEligibilityPolicy;
 import com.ramon.loans.core.domain.rule.LoanRule;
-import com.ramon.loans.core.factories.CustomerFactory;
-import com.ramon.loans.core.factories.LoanFactory;
+import com.ramon.loans.coretest.factories.CustomerFactory;
+import com.ramon.loans.coretest.factories.LoanFactory;
 
 public class LoanEligibilityPolicyTests {
 

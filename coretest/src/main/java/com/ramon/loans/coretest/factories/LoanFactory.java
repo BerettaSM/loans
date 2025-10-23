@@ -1,4 +1,4 @@
-package com.ramon.loans.core.factories;
+package com.ramon.loans.coretest.factories;
 
 import java.util.List;
 

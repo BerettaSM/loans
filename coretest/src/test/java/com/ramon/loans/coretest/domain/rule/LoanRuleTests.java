@@ -1,4 +1,4 @@
-package com.ramon.loans.core.domain.rule;
+package com.ramon.loans.coretest.domain.rule;
 
 import java.util.List;
 
@@ -13,9 +13,10 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import com.ramon.loans.core.domain.models.Customer;
-import com.ramon.loans.core.factories.CustomerFactory;
-import com.ramon.loans.core.factories.LoanFactory;
+import com.ramon.loans.core.domain.rule.LoanRule;
 import com.ramon.loans.core.specifications.Specification;
+import com.ramon.loans.coretest.factories.CustomerFactory;
+import com.ramon.loans.coretest.factories.LoanFactory;
 
 @SuppressWarnings("unchecked")
 public class LoanRuleTests {

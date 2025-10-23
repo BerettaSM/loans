@@ -1,4 +1,4 @@
-package com.ramon.loans.core.domain.rule.specifications;
+package com.ramon.loans.coretest.domain.rule.specifications;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import com.ramon.loans.core.domain.enums.State;
 import com.ramon.loans.core.domain.models.Customer;
-import com.ramon.loans.core.factories.CustomerFactory;
+import com.ramon.loans.core.domain.rule.specifications.LocationSpec;
+import com.ramon.loans.coretest.factories.CustomerFactory;
 
 public class LocationSpecTests {
     
