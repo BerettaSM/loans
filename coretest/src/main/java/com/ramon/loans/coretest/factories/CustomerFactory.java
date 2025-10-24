@@ -8,6 +8,14 @@ import com.ramon.loans.core.domain.models.Customer;
 
 public class CustomerFactory {
 
+    public static final Customer with(Double income, Integer age, State location) {
+        Customer customer = createCustomer();
+        customer.setIncome(BigDecimal.valueOf(income));
+        customer.setAge(age);
+        customer.setLocation(location);
+        return customer;
+    }
+
     public static final Customer withAge(Integer age) {
         Customer customer = createCustomer();
         customer.setAge(age);
