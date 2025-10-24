@@ -1,5 +1,6 @@
 package com.ramon.loans.application.factories;
 
+import com.ramon.loans.application.ruleconfig.ConsignmentLoanRule;
 import com.ramon.loans.application.ruleconfig.GuaranteedLoanRule;
 import com.ramon.loans.application.ruleconfig.PersonalLoanRule;
 
@@ -11,6 +12,10 @@ public class LoanRuleFactory {
 
     public static final GuaranteedLoanRule createGuaranteedLoanRule() {
         return new GuaranteedLoanRule();
+    }
+
+    public static final ConsignmentLoanRule createConsignmentLoanRule() {
+        return new ConsignmentLoanRule();
     }
 
 }
