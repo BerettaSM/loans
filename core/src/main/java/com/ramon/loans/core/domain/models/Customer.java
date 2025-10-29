@@ -19,8 +19,4 @@ public class Customer {
     private BigDecimal income;
     private State location;
 
-    public Customer(String name, String cpf, Integer age, BigDecimal income, String location) {
-        this(name, cpf, age, income, State.valueOf(location));
-    }
-
 }
