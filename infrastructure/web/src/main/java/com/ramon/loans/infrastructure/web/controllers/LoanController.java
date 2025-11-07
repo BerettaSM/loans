@@ -14,6 +14,7 @@ import com.ramon.loans.infrastructure.web.dto.LoanAssessmentDTO;
 import com.ramon.loans.infrastructure.web.mappers.CustomerMapper;
 import com.ramon.loans.infrastructure.web.mappers.LoanMapper;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -26,7 +27,7 @@ public class LoanController {
     private final LoanMapper loanMapper;
 
     @PostMapping("/customer-loans")
-    public ResponseEntity<LoanAssessmentDTO> assessLoans(@RequestBody CustomerDTO dto) {
+    public ResponseEntity<LoanAssessmentDTO> assessLoans(@RequestBody @Valid CustomerDTO dto) {
         CustomerRequestModel customer = customerMapper.toRequestModel(dto);
         LoanAssessmentResponseModel loanAssessment = assessLoansInputPort.execute(customer);
         return ResponseEntity.ok(loanMapper.toLoanAssessmentDTO(loanAssessment));

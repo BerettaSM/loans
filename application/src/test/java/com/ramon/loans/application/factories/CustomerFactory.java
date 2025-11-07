@@ -13,7 +13,7 @@ public class CustomerFactory {
         customer.setCpf("000.000.000-00");
         customer.setIncome(BigDecimal.ZERO);
         customer.setAge(42);
-        customer.setLocation(State.AC.toString());
+        customer.setLocation(State.AC);
         return customer;
     }
 
