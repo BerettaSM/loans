@@ -25,7 +25,6 @@
         <module>core</module>
         <module>coretest</module>
         <module>application</module>
-        <module>adapters</module>
         <module>infrastructure</module>
     </modules>
 
